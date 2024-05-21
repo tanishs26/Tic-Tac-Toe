@@ -23,7 +23,9 @@ const winningCombination = [
 ];
 
 function selectBox() {
+  
   for (let i = 0; i < select.length; i++) {
+    
     select[i].addEventListener("click", () => {
       if (select[i].textContent === "" && gameActive) {
         if (currentPlayer === "X") {
@@ -56,9 +58,9 @@ function checkWin() {
       } wins`;
       winplay();
       confetti();
-      select[a].style.backgroundColor = "greenyellow";
-      select[b].style.backgroundColor = "greenyellow";
-      select[c].style.backgroundColor = "greenyellow";
+      select[a].style.backgroundColor='greenyellow'
+      select[b].style.backgroundColor='greenyellow'
+      select[c].style.backgroundColor='greenyellow'
       return;
     }
   }
@@ -84,9 +86,10 @@ resetButton.addEventListener("click", () => {
   currentPlayer = "X";
   gameInfo.textContent = "";
   wininfo.textContent = "";
-  select.forEach((e) => {
-    e.style.backgroundColor = "white";
-  });
+  select.forEach((e)=>{
+    e.style.backgroundColor='white';
+  })
+ 
 });
 function play() {
   let audio = new Audio("click.mp3");
