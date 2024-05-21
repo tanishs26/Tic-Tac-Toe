@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: montserrat, sans-serif, Helvetica;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+}
+h1 {
+  text-align: center;
+  font-size: 5vw;
+  margin: 2vw;
+}
+.gamecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+}
+.box {
+  border: 1px solid black;
+  font-size: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:hover {
+  background-color: rgb(249, 231, 245);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.gameinfo {
+  display: flex;
+  text-align: center;
+  width: 30vw;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wininfo {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.playerInfo {
+  font-weight: bold;
+  font-size: 3vw;
+  text-align: center;
+}
+#reset {
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: aquamarine;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+}
+#reset:active {
+  scale: 0.9;
+  transition: 0.15s;
+}
+#reset:hover {
+  cursor: pointer;
+  background-color: rgb(153, 255, 221);
+  color: white;
+}
+
+.brt {
+  border-right: none;
+}
+.blt {
+  border-left: none;
+}
+.btt {
+  border-top: none;
+}
+.bbt {
+  border-bottom: none;
+}
+@media (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(3, 70px);
+  }
+  .gameinfo {
+    width: 200px;
+  }
+  .playerInfo {
+    font-size: 1rem;
+  }
+  .wininfo {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
