@@ -56,6 +56,9 @@ function checkWin() {
       } wins`;
       winplay();
       confetti();
+      select[a].style.backgroundColor = "greenyellow";
+      select[b].style.backgroundColor = "greenyellow";
+      select[c].style.backgroundColor = "greenyellow";
       return;
     }
   }
@@ -81,6 +84,9 @@ resetButton.addEventListener("click", () => {
   currentPlayer = "X";
   gameInfo.textContent = "";
   wininfo.textContent = "";
+  select.forEach((e) => {
+    e.style.backgroundColor = "white";
+  });
 });
 function play() {
   let audio = new Audio("click.mp3");
