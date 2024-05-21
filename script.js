@@ -36,9 +36,9 @@ function selectBox() {
           stateBoard[i] = "O";
           play();
         }
+        checkWin();
+        changePlayer();
       }
-      checkWin();
-      changePlayer();
     });
   }
 }
@@ -55,7 +55,6 @@ function checkWin() {
         currentPlayer === "X" ? "Player one " : "Player two"
       } wins`;
       winplay();
-      confetti();
       confetti();
       return;
     }

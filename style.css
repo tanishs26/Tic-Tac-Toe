@@ -3,7 +3,6 @@
   padding: 0;
   font-family: montserrat, sans-serif, Helvetica;
 }
-
 main {
   display: flex;
   justify-content: center;
@@ -33,11 +32,10 @@ h1 {
   align-items: center;
 }
 .box:hover {
-  background-color: rgb(249, 231, 245);
+  background-color: rgb(211, 251, 250);
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
 }
-
 .gameinfo {
   display: flex;
   text-align: center;
@@ -45,12 +43,10 @@ h1 {
   flex-direction: column;
   gap: 20px;
 }
-
 .wininfo {
   font-size: 2rem;
   text-align: center;
 }
-
 .playerInfo {
   font-weight: bold;
   font-size: 3vw;
