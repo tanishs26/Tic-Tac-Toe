@@ -27,13 +27,13 @@ function selectBox() {
     select[i].addEventListener("click", () => {
       if (select[i].textContent === "" && gameActive) {
         if (currentPlayer === "X") {
-          select[i].textContent = "X";
-          stateBoard[i] = "X";
+          select[i].textContent = "✖️";
+          stateBoard[i] = "✖️";
           const mark = document.querySelectorAll(".mark");
           play();
         } else if (currentPlayer == "O") {
-          select[i].textContent = "O";
-          stateBoard[i] = "O";
+          select[i].textContent = "⭕️";
+          stateBoard[i] = "⭕️";
           play();
         }
         checkWin();
@@ -51,7 +51,7 @@ function checkWin() {
       stateBoard[a] === stateBoard[c]
     ) {
       gameActive = false;
-      wininfo.textContent = `Congratulations ${
+      wininfo.textContent = `🏆️ Congratulations! ${
         currentPlayer === "X" ? "Player one " : "Player two"
       } wins`;
       winplay();
@@ -60,7 +60,7 @@ function checkWin() {
     }
   }
   if (!stateBoard.includes("")) {
-    wininfo.textContent = "It's a Draw!";
+    wininfo.textContent = "It's a Draw!😛️";
     gameActive = false;
   }
 }
